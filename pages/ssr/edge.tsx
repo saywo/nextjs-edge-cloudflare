@@ -3,6 +3,10 @@ import { GetServerSideProps } from "next";
 
 type Data = { shops: { id: string; name: string }[] };
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 export const getServerSideProps: GetServerSideProps<{
   data: Data;
 }> = async () => {
